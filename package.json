@@ -1,7 +1,7 @@
 {
-  "name": "hclang",
-  "displayName": "Homoiconic C",
-  "description": "Homoiconic C, the univeral language for code and data",
+  "name": "language-hclang",
+  "displayName": "Homoiconic C Language Binding",
+  "description": "VS Code bindings for Homoiconic C, the univeral language for code and data",
   "version": "0.0.1",
   "engines": {
     "vscode": "^1.93.0"
