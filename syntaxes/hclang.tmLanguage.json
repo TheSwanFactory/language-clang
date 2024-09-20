@@ -1,41 +1,42 @@
 {
-	"$schema": "https://raw.githubusercontent.com/martinring/tmlanguage/master/tmlanguage.json",
-	"name": "Homoiconic C",
+    "$schema": "https://raw.githubusercontent.com/martinring/tmlanguage/master/tmlanguage.json",
+    "name": "Homoiconic C",
+    "scopeName": "source.hclang",
     "fileTypes": [
         "hc"
     ],
     "patterns": [
         {
-            "name": "comment.line.number-sign.hc",
+            "name": "comment.line.number-sign.hclang",
             "match": "(#)([^#\\n]*)$\\n"
         },
         {
-            "name": "comment.block.number-sign.hc",
+            "name": "comment.block.number-sign.hclang",
             "begin": "#",
             "beginCaptures": {
                 "0": {
-                    "name": "punctuation.definition.comment.begin.hc"
+                    "name": "punctuation.definition.comment.begin.hclang"
                 }
             },
             "end": "#",
             "endCaptures": {
                 "0": {
-                    "name": "punctuation.definition.comment.end.hc"
+                    "name": "punctuation.definition.comment.end.hclang"
                 }
             }
         },
         {
-            "name": "string.quoted.double.hc",
+            "name": "string.quoted.double.hclang",
             "begin": "“",
             "beginCaptures": {
                 "0": {
-                    "name": "punctuation.definition.string.begin.hc"
+                    "name": "punctuation.definition.string.begin.hclang"
                 }
             },
             "end": "”",
             "endCaptures": {
                 "0": {
-                    "name": "punctuation.definition.string.end.hc"
+                    "name": "punctuation.definition.string.end.hclang"
                 }
             },
             "patterns": [
@@ -43,6 +44,42 @@
                     "include": "#smart_quote"
                 }
             ]
+        },
+        {
+            "name": "string.quoted.backtick.hclang",
+            "begin": "`",
+            "beginCaptures": {
+                "0": {
+                    "name": "punctuation.definition.string.begin.hclang"
+                }
+            },
+            "end": "`",
+            "endCaptures": {
+                "0": {
+                    "name": "punctuation.definition.string.end.hclang"
+                }
+            },
+            "patterns": [
+                {
+                    "include": "#smart_quote"
+                }
+            ]
+        },
+        {
+            "name": "symbol.hclang",
+            "match": "\\b[a-zA-Z][a-zA-Z0-9_]*\\b"
+        },
+        {
+            "name": "constant.numeric.hclang",
+            "match": "\\b\\d+(\\.\\d+)?\\b"
+        },
+        {
+            "name": "keyword.operator.hclang",
+            "match": "[^a-zA-Z0-9\\s]"
+        },
+        {
+            "name": "name.hclang",
+            "match": "\\.[^\\.\\s]+"
         }
     ],
     "repository": {
@@ -50,13 +87,13 @@
             "begin": "“",
             "beginCaptures": {
                 "0": {
-                    "name": "punctuation.definition.string.begin.hc"
+                    "name": "punctuation.definition.string.begin.hclang"
                 }
             },
             "end": "”",
             "endCaptures": {
                 "0": {
-                    "name": "punctuation.definition.string.end.hc"
+                    "name": "punctuation.definition.string.end.hclang"
                 }
             },
             "patterns": [
