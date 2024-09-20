@@ -1,0 +1,25 @@
+{
+  "name": "hclang",
+  "displayName": "Homoiconic C",
+  "description": "Homoiconic C, the univeral language for code and data",
+  "version": "0.0.1",
+  "engines": {
+    "vscode": "^1.93.0"
+  },
+  "categories": [
+    "Programming Languages"
+  ],
+  "contributes": {
+    "languages": [{
+      "id": "hclang",
+      "aliases": ["Homoiconic C", "hclang", "hc"],
+      "extensions": ["hc"],
+      "configuration": "./language-configuration.json"
+    }],
+    "grammars": [{
+      "language": "hclang",
+      "scopeName": "",
+      "path": "./syntaxes/hclang.tmLanguage.json"
+    }]
+  }
+}
